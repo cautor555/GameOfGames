@@ -57,7 +57,7 @@ public class RedThread extends Game { //class
 
       for(int i = 0; i<maxSpoolRemoval; i++) {
         playerGuesses[i] = getInput.getPlayerIntInput(MESSAGES[1], MESSAGES[1], TOTAL_SPOOLS) -1;
-        while(!(guessIsValid(playerGuesses[i])))
+        while(!(guessIsValid(playerGuesses[i])) || arrayContains(i, playerGuesses))
           playerGuesses[i] = getInput.getPlayerIntInput(ERROR_MSGS[1], MESSAGES[1], TOTAL_SPOOLS) -1;
       }
 
@@ -124,6 +124,22 @@ public class RedThread extends Game { //class
     else if(unsortedSpoolColors[guess].equals(TAKEN_SPOOL))
       return false;
     return true;
+  }
+
+  /**
+    * arrayContains method
+    *
+    * @param  int guessIndex, int[]guesses
+    * @return boolean
+    */
+
+  private boolean arrayContains(int guessIndex, int[] guesses) {
+    for(int i = 0; i<guesses.length; i++)
+    {
+      if(guesses[guessIndex] == guesses[i] && i!=guessIndex)
+        return true;
+    }
+    return false;
   }
 
   /**
