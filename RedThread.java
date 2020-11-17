@@ -74,7 +74,7 @@ public class RedThread extends Game { //class
       catch (Exception e) { }
 
       for(int i = 0; i<maxSpoolRemoval; i++) {
-        while(!guessIsValid(computerGuesses[i]))
+        while(!guessIsValid(computerGuesses[i]) || arrayContains(i, playerGuesses))
           computerGuesses[i] = getNumberInRange(TOTAL_SPOOLS-1);
       }
 
