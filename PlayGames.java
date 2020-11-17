@@ -13,7 +13,7 @@ public class PlayGames {
   private final static String CHOOSE_GAME_PROMPT = "Input number to select game to play (1: Find the Thimble, 2: Coin Flip, 3: Guess the Number, 4: Even Odd, 5: Find the Red Thread)";
   private final static String CHOOSE_GAME_ERROR = "Invalid selection, please choose again";
   private final static String CONTINUE_PROMPT = "Input 'quit' to quit Game of Games or 'cont' to continue playing";
-  private final static String CONTINUE_ERROR = "invalid input, please enter 'quit' or ‘cont'";
+  private final static String CONTINUE_ERROR = "invalid input, please enter 'quit' or 'cont'";
   private final static String QUIT = "quit";
   private final static String CONTINUE = "cont";
   private final static String WIN = "You win!";
