@@ -33,7 +33,7 @@ public class CoinFlip extends Game {
   	if(modeChoice.equals("Guesser") || modeChoice.equals("guesser")) {
   		playerMode = PLAYER_IS_GUESSER;
   	}
-    System.out.println(playerMode);
+    
 
     while(playerScore <= bestOf / 2 && opponentScore <= bestOf / 2 ) {
   	  if(playerMode == PLAYER_IS_GUESSER){
