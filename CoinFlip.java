@@ -10,7 +10,7 @@ import java.util.*;
 public class CoinFlip extends Game {
   private int playerMode=0;
   private final static int PLAYER_IS_GUESSER = 1;
-  private final String VALID_ANSWERS_GAME_ROLE[] = {"Guesser", "Flipper", "guesser", "flipper"}; // replace at line 21
+  private final String VALID_ANSWERS_GAME_ROLE[] = {"Guesser", "Flipper", "guesser", "flipper"};
   private final String VALID_ANSWERS_FLIP[] = {"flip", "Flip"};
 
   /**
@@ -33,7 +33,7 @@ public class CoinFlip extends Game {
   	if(modeChoice.equals("Guesser") || modeChoice.equals("guesser")) {
   		playerMode = PLAYER_IS_GUESSER;
   	}
-    
+
 
     while(playerScore <= bestOf / 2 && opponentScore <= bestOf / 2 ) {
   	  if(playerMode == PLAYER_IS_GUESSER){
@@ -54,6 +54,8 @@ public class CoinFlip extends Game {
     		if(flipCommand.equals("Flip") || flipCommand.equals("flip")){
     			int result = getNumberInRange(2);
     			int computerGuess = getNumberInRange(2);
+				String sideOfCoin[] = {"Heads", "Tails"};
+				System.out.println("Computer guessed " + sideOfCoin[computerGuess-1] + " and you flipped " + sideOfCoin[result-1]);
     			if (checkAnswer(computerGuess, result)){
     					opponentScoresAPoint();
     		  }
